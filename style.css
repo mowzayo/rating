@@ -1,0 +1,199 @@
+body {
+    background-color: #e9f5f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+   background-color: hsl(213, 19%, 18%);
+   border-radius: 10px;
+    padding: 20px;
+}
+
+.p {
+    font-size:xx-small;
+}
+
+.rating {
+    color: hsl(217, 12%, 63%);
+    display: flex;
+    flex-direction: row;/* Allows circles to wrap to the next line if necessary */
+    gap: 15px; /* Space between circles */
+}
+
+.ratin {
+    width: 40px; /* Circle width */
+    height: 40px; /* Circle height */
+    border-radius: 50%; /* Makes the element circular */
+    background-color:hsl(216, 12%, 8%); /* Circle background color */
+    display: flex; /* Center content inside the circle */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ratin:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: black;
+    transform: scale(1.2); /* Makes the circle slightly bigger on hover */
+}
+
+.rat {
+    width: 40px; /* Circle width */
+    height: 40px; /* Circle height */
+    border-radius: 50%; /* Makes the element circular */
+    background-color:hsl(216, 12%, 8%); /* Circle background color */
+    display: flex; /* Center content inside the circle */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-weight: bold; /* Bold text */
+    position: relative;
+    color: hsl(217, 12%, 63%);
+}
+
+
+.write {
+    color: hsl(217, 12%, 63%);
+    font-size: small;
+}
+
+.selected {
+    background-color: white;
+    color: black;
+    border: 1px solid black; /* Optional: change border color when selected */
+}
+
+.write h1 {
+    color: white;
+}
+
+.reset {
+   
+    background-color: hsl(25, 97%, 53%);
+    border-radius: 15px;
+    color: black;
+    margin-top: 20px;
+    width: 270px;
+    height: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reset:hover {
+    background-color: white;
+    color: black;
+
+}
+
+#thankYouContainer {
+    display: flex;
+    justify-content: center; /* Centering the content */
+    align-items: center; /* Aligning items vertically */
+    flex-direction: column; /* Column direction for stacking */
+    background-color: hsl(213, 19%, 18%); /* Light background color */
+    padding: 20px; /* Padding for the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+margin-bottom: 150px;
+    margin-right: 150px;
+}
+
+#thankYouMessage {
+    text-align: center; /* Center align the text */
+}
+
+.selected-rating-container {
+    background-color: hsl(216, 12%, 8%); /* Green background for the rating container */
+    border-radius: 5px; /* Rounded corners for the rating container */
+    color: hsl(25, 97%, 53%); /* Text color inside this container */
+    margin-bottom: 20px; /* Space below the rating container */
+    padding: 0px ; /* 1px padding on top and bottom, 0 on left and right */
+    text-align: center; 
+}
+
+
+.thank-you-text {
+    color: white; /* Color for the rest of the text */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the thank you text */
+    display: block; 
+}
+
+.thank-you-img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.ttext {
+    color: hsl(217, 12%, 63%);
+}
+
+@media (max-width: 375px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        background-color: hsl(216, 12%, 8%);
+    }
+
+    #thankYouContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 80%;
+        z-index: 999;
+        padding: 10px;
+    }
+
+    .rating {
+        flex-direction: row;
+        gap: 15px;
+        display: flex;
+    }
+
+    .ratin {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: hsl(216, 12%, 8%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        touch-action: manipulation;
+    }
+
+    .ratin:hover, .ratin:active {
+        background-color: hsl(25, 97%, 53%);
+        color: black;
+        transform: scale(1.2);
+    }
+
+    .reset {
+        background-color: hsl(25, 97%, 53%);
+        border-radius: 15px;
+        color: black;
+        margin-top: 20px;
+        width: 270px;
+        height: 35px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        touch-action: manipulation;
+    }
+
+    .reset:hover, .reset:active {
+        background-color: white;
+        color: black;
+    }
+}
+
